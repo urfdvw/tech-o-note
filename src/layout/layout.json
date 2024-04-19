@@ -13,8 +13,20 @@
             "children": [
                 {
                     "type": "tab",
-                    "name": "Folder View",
-                    "component": "folder_view",
+                    "name": "Tags",
+                    "component": "placeholder",
+                    "enableClose": false
+                },
+                {
+                    "type": "tab",
+                    "name": "Bookmarks",
+                    "component": "placeholder",
+                    "enableClose": false
+                },
+                {
+                    "type": "tab",
+                    "name": "Settings",
+                    "component": "Settings",
                     "enableClose": false
                 }
             ]
@@ -31,8 +43,8 @@
                 "children": [
                     {
                         "type": "tab",
-                        "name": "Navigation",
-                        "component": "navigation",
+                        "name": "Viewer",
+                        "component": "placeholder",
                         "enableClose": true
                     }
                 ]
@@ -44,8 +56,8 @@
                 "children": [
                     {
                         "type": "tab",
-                        "name": "Serial Console",
-                        "component": "serial_raw",
+                        "name": "Editor",
+                        "component": "placeholder",
                         "enableClose": false
                     }
                 ]

@@ -12,6 +12,7 @@ import Context from "./Context";
 // layout
 import * as FlexLayout from "flexlayout-react";
 import layout from "./layout/layout.json";
+import factory from "./layout/tabFactory";
 
 function App() {
     // main directory for folderView
@@ -19,7 +20,7 @@ function App() {
     // config
     const { config, set_config, ready: configReady } = useConfig(schemas);
     // flex layout
-    const [flexModel, setFlexModel] = useState(FlexLayout.Model.fromJson(layout)); // not ready
+    const [flexModel, setFlexModel] = useState(FlexLayout.Model.fromJson(layout));
     // confirm leave
     useEffect(() => {
         // https://stackoverflow.com/a/47477519/7037749
@@ -60,7 +61,9 @@ function App() {
             <div className="techonote">
                 <DarkTheme dark={dark} />
                 <div className="techonote-header">head</div>
-                <div className="techonote-body">body</div>
+                <div className="techonote-body">
+                    <FlexLayout.Layout model={flexModel} factory={factory} />;
+                </div>
             </div>
         </Context.Provider>
     );
