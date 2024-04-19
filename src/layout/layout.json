@@ -1,0 +1,55 @@
+{
+    "global": {
+        "tabEnableClose": true,
+        "tabEnableFloat": false,
+        "tabEnableRename": false
+    },
+    "borders": [
+        {
+            "type": "border",
+            "location": "top",
+            "size": 300,
+            "selected": 0,
+            "children": [
+                {
+                    "type": "tab",
+                    "name": "Folder View",
+                    "component": "folder_view",
+                    "enableClose": false
+                }
+            ]
+        }
+    ],
+    "layout": {
+        "type": "row",
+        "weight": 100,
+        "children": [
+            {
+                "type": "tabset",
+                "weight": 50,
+                "selected": 0,
+                "children": [
+                    {
+                        "type": "tab",
+                        "name": "Navigation",
+                        "component": "navigation",
+                        "enableClose": true
+                    }
+                ]
+            },
+            {
+                "type": "tabset",
+                "weight": 50,
+                "selected": 0,
+                "children": [
+                    {
+                        "type": "tab",
+                        "name": "Serial Console",
+                        "component": "serial_raw",
+                        "enableClose": false
+                    }
+                ]
+            }
+        ]
+    }
+}
